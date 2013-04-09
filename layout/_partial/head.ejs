@@ -44,7 +44,9 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
   <script>
   $(document).ready(function() {
-    $('#sidebar').delay(400).animate({ width: '285px' }, 500, function() { });
+    $('#sidebar').delay(400).animate({ width: '285px' }, 500, function() {
+      $('.personal-info').css({display: 'table'}).hide().fadeIn(500);
+    });
   });
   </script>
   <%- partial('google_analytics') %>

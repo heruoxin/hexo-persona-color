@@ -1,17 +1,35 @@
+
 #sidebar
   width 0
   line-height 1.8em
-  position: absolute
-  right:70%
-  top:0
-  left: 0px
-  border-right: Solid 1px Gray
-  height: 100%
-  background-color: #AAAAAA
+  position fixed
+  right 70%
+  top 0
+  left 0px
+  border-right Solid 1px Gray
+  height 100%
+  background-color #AAAAAA
+  box-shadow 0 0 10px rgba(3, 3, 3, .75)
   @media screen and (max-width: 900px)
     // float none
     // width 100%
     display none
+
+  .personal-info
+    position relative
+    text-align center
+    top 5%
+    display none
+    margin 0 auto
+    max-width 30%
+  .personal-photo
+    border-radius 150px
+    border 5px solid white
+    box-shadow 1px 2px 3px #333
+  .personal-name
+    font-size 1.5em
+
+
   .widget
     background #fff
     box-shadow 1px 2px 3px #ddd
