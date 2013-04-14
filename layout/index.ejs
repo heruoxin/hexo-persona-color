@@ -5,7 +5,6 @@
   <div class="archive">
     
     <article class="<%= item.layout %>">
-      <a href="http://google.com"> 
       <div class="post-content">
         <header>
             <% if (item.link){ %>
@@ -22,7 +21,6 @@
             <time class="time title" datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
           </header>
       </div>
-    </a>
     </article>
   </div>
   
