@@ -6,27 +6,32 @@
   right 70%
   top 0
   left 0px
-  border-right Solid 1px Gray
+  border-right Solid 1px color-border
   height 100%
   background-color color-sidebar
-  box-shadow 0 0 10px rgba(3, 3, 3, .75)
+  background linear-gradient(top, #1f1f1f, #222)
+  box-shadow 0 0 8px rgba(3, 3, 3, .75)
   @media screen and (max-width: 900px)
     // float none
     // width 100%
     display none
 
   .personal-info
-    color color-font
+    color color-font2
     position relative
     text-align center
     top 5%
     display none
     margin 0 auto
     max-width 30%
+  .personal-info figure
+    border-bottom solid 1px #001
+  .social
+    border-top solid 1px #2d2d2d
   .personal-photo
     border-radius 150px
     // border 5px solid white
-    box-shadow 1px 2px 3px #333
+    // box-shadow 1px 2px 3px #333
   .personal-name
     font-size 1.5em
   .icon
@@ -39,7 +44,7 @@
     color color-font
     font-size 30px
     &:hover
-      color color-link
+      color color-font2
   .github
     &:before
       content "\f09b"
