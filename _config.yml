@@ -11,9 +11,13 @@ widgets:
 excerpt_link: Read More
 
 twitter:
-  username: 
+  username: thiagopnts
   show_replies: false
   tweet_count: 5
+
+facebook: thiagopnts
+github: thiagopnts
+email: thiagopnts+contact@gmail.com
 
 addthis:
   enable: true

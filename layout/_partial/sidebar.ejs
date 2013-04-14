@@ -9,4 +9,16 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, architecto, velit iusto corporis ipsa ea illum est fugit perferendis aliquid odit sit quis voluptatem! Assumenda voluptatibus similique doloremque quod odit.</p>
     </figcaption>
   </figure>
+  <% if( theme.twitter.username ) { %>
+    <a target="_blank" class="icon twitter" href="http://twitter.com/<%- theme.twitter.username %>"></a>
+  <% } %>
+  <% if( theme.facebook ) { %>
+    <a target="_blank" class="icon facebook" href="http://fb.com/<%- theme.facebook %>"></a> 
+  <% } %>
+  <% if( theme.github) { %>
+    <a target="_blank" class="icon github" href="http://github.com/<%= theme.github %>"></a>
+  <% } %>
+  <% if( theme.email ) { %>
+    <a target="_blank" class="icon email" href="mailto:<%- theme.email %>"></a>
+  <% } %>
 </div>
