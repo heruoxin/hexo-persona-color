@@ -11,15 +11,15 @@ widgets:
 excerpt_link: Read More
 
 twitter:
-  username: thiagopnts
+  username: twitter
   show_replies: false
   tweet_count: 5
 
-facebook: thiagopnts
-github: thiagopnts
-email: thiagopnts+contact@gmail.com
-name: Thiago Pontes
-about: "Code, coffee and beer."
+facebook: your facebook url
+github: github
+email: email
+about: "Something about you here"
+photo: http://www.techinasia.com/techinasia/wp-content/uploads/2009/11/facebook-avatar.png
 
 addthis:
   enable: true

@@ -1,13 +1,13 @@
-# Persona
+# Persona Dark
 
 Theme for [Hexo].
 
 ## Install
 
-Execute the following command and modify `theme` in `_config.yml` to `persona`.
+Execute the following command and modify `theme` in `_config.yml` to `persona-dark`.
 
 ```
-git clone git://github.com/thiagopnts/persona.git themes/persona
+git clone git://github.com/thiagopnts/hexo-persona-dark.git themes/persona
 ```
 
 ## Update
@@ -15,7 +15,7 @@ git clone git://github.com/thiagopnts/persona.git themes/persona
 Execute the following command to update Persona.
 
 ```
-cd themes/persona
+cd themes/persona-dark
 git pull
 ```
 
