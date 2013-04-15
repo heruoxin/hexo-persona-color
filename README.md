@@ -2,6 +2,8 @@
 
 Theme for [Hexo].
 
+[Demo]
+
 ## Install
 
 Execute the following command and modify `theme` in `_config.yml` to `persona-dark`.
@@ -73,9 +75,8 @@ rss:
 - **google_analytics** - Google Analytics ID
 - **rss** - RSS subscription link (change if using Feedburner)
 
-## Features
-
 
 [Hexo]: http://zespia.tw/hexo/
+[Demo]: http://thiagopnts.me/hexo-persona-dark/
 [AddThis]: https://www.addthis.com
 [Fancybox]: http://fancyapps.com/fancybox/
