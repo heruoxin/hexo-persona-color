@@ -3,11 +3,13 @@
 <% }); %> -->
 <div class="personal-info">
   <figure>
-    <a href="/">
-      <img class="personal-photo" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/c0.0.160.160/p160x160/275139_1134525339_704369436_n.jpg" alt="Thiago Pontes">
-    </a>
+    <% if(theme.photo) { %>
+      <a href="/">
+        <img class="personal-photo" src="<%- theme.photo %>" alt="<%- config.author %>">
+      </a>
+    <% } %>
     <figcaption>
-      <h3 class=><%- theme.name %></h3>
+      <h3 class=><%- config.author %></h3>
       <p><%- theme.about %></p>
     </figcaption>
   </figure>
