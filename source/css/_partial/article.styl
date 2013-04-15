@@ -3,8 +3,8 @@ icon-gap = 25px
 
 
 article
-  box-shadow 1px 2px 3px #ddd
-  background color-article
+  // box-shadow 1px 2px 3px #ddd
+  // background linear-gradient(top, #1f1f1f, #222)
   &.page
     padding-left 20px
     .icon
@@ -104,9 +104,9 @@ article
       position absolute
       top 16px
       left 20px
-      color color-title
+      color color-font2
       &:hover
-        color color-link
+        color color-font
         text-decoration none
 
       @media screen and (max-width: 600px)
@@ -129,15 +129,17 @@ article
     .title
       font-weight normal
       display inline
+      color color-font2
       a
-        color color-title
+        color color-font2
         &:hover
-          color color-font2
+          color color-font
           text-decoration none
 
   .entry
     text-align justify
     line-height 1.6
+    font-size 1.3em
     p, blockquote, ul, ol, dl, table, iframe, h3, h4, h5, h6, .video-container
       margin-top 15px
 

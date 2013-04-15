@@ -5,12 +5,12 @@
   <div class="post-content">
     <header>
       <% if (item.layout != 'page'){ %>
-        <div class="icon"></div>
-        <time datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <div class="icon depth"></div>
+        <time class="depth" datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
       <% } %>
       <%- partial('post/title') %>
     </header>
-    <div class="entry">
+    <div class="entry depth">
       <% if (item.excerpt && index){ %>
         <%- item.excerpt %>
       <% } else { %>
