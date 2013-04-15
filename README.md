@@ -7,12 +7,12 @@ Theme for [Hexo].
 Execute the following command and modify `theme` in `_config.yml` to `persona-dark`.
 
 ```
-git clone git://github.com/thiagopnts/hexo-persona-dark.git themes/persona
+git clone git://github.com/thiagopnts/hexo-persona-dark.git themes/persona-dark
 ```
 
 ## Update
 
-Execute the following command to update Persona.
+Execute the following command to update Persona Dark.
 
 ```
 cd themes/persona-dark
