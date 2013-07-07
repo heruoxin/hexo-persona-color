@@ -7,6 +7,8 @@ article
   // background linear-gradient(top, #1f1f1f, #222)
   &.page
     padding-left 20px
+    @media screen and (max-width: 600px)
+      padding-left 10px
     .icon
       display none
 
@@ -46,7 +48,7 @@ article
     margin-bottom 50px
     position relative
     @media screen and (max-width: 600px)
-      padding-left 20px
+      padding-left 10px
 
   .gallery
     overflow hidden
@@ -149,7 +151,7 @@ article
       font-style italic
       font-family font-serif
       font-size 1.2em
-      padding 0 30px 15px
+      padding 0 20px 15px
       text-align center
       footer
         border-top none
@@ -248,6 +250,9 @@ article
       text-align left
       width 45%
       font-size 1.5em
+
+    img 
+      width: 100%;
 
   footer
     margin-top 15px
