@@ -20,11 +20,17 @@
     <% if( theme.facebook ) { %>
       <a target="_blank" class="icon facebook depth" href="http://fb.com/<%- theme.facebook %>"></a> 
     <% } %>
+    <% if( theme.googleplus ) { %>
+      <a target="_blank" class="icon googleplus depth" href="http://plus.google.com/<%- theme.googleplus %>"></a> 
+    <% } %>
     <% if( theme.github) { %>
       <a target="_blank" class="icon github depth" href="http://github.com/<%= theme.github %>"></a>
     <% } %>
     <% if( theme.email ) { %>
       <a target="_blank" class="icon email depth" href="mailto:<%- theme.email %>"></a>
+    <% } %>
+    <% if( theme.zhihu ) { %>
+      <a target="_blank" class="icon zhihu depth" href="http://zhihu.com/people/<%- theme.zhihu %>"></a>
     <% } %>
   </section>
 </div>

@@ -6,18 +6,18 @@
   right 70%
   top 0
   left 0px
-  border-right solid 1px #2d2d2d
+  border-right solid 1px #93f2dd
   height 100%
   background-color color-sidebar
-  background linear-gradient(top, #1f1f1f, #222)
-  box-shadow 1px 0 0 0 #222
+  background #1b7aca
+  box-shadow 0px 0 0 0 #222
   @media screen and (max-width: 900px)
     // float none
     // width 100%
     display none
 
   .personal-info
-    color color-font2
+    color color-info
     position relative
     text-align center
     top 5%
@@ -25,16 +25,16 @@
     margin 0 auto
     max-width 30%
   .personal-info figure
-    border-bottom solid 1px #001
+    border-bottom solid 1px #1b7aca
   .social
-    border-top solid 1px #2d2d2d
+    border-top solid 1px #1b7aca
     width: 200px
   .personal-photo
     border-radius 150px
     height 170px
     width 170px
     // border 5px solid white
-    // box-shadow 1px 2px 3px #333
+    // box-shadow 1px 2px 3px #6d6d6d
   .personal-name
     font-size 1.5em
   .icon
@@ -44,20 +44,25 @@
     padding 10px
     top 25px
     text-decoration none
-    color color-font
+    color color-info
     font-size 30px
     &:hover
       color color-font2
   .github
     &:before
       content "\f09b"
-
+  .googleplus
+    &:before
+      content "\f0d4"
+  .zhihu
+    &:before
+      content "知"
   .facebook
     &:before
       content "\f082"
   .twitter
     &:before
-      content "\f081"
+      content "\f099"
   .email
     &:before
       content "\f0e0"
