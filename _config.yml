@@ -1,5 +1,4 @@
 menu:
-  Home: /
   Archives: /archives
 
 widgets: 
@@ -18,8 +17,8 @@ twitter:
 #facebook: your facebook url
 #github: thiagopnts
 email: 
-about: "http://www.1ittlecup.com"
-photo: /icon.png
+about: "Hello, this is a test……"
+photo: http://ww3.sinaimg.cn/large/66cab368gw1ecpwvwjl3zj20dg0dfq47.jpg
 googleplus: "+RuoxinHe"
 zhihu: littlecup
 

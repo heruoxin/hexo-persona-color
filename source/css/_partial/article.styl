@@ -36,7 +36,9 @@ article
           padding-left 10px
           vertical-align super
 
-  .time
+  .time.title
+    @media screen and (max-width: 450px)
+      display: none
     position relative
     font-size 1.2em
     display inline
@@ -106,7 +108,7 @@ article
       position absolute
       top 16px
       left 20px
-      color color-font2
+      color color-title-font
       &:hover
         color color-font
         text-decoration none
@@ -131,11 +133,11 @@ article
     .title
       font-weight normal
       display inline
-      color color-font2
+      color color-title-font
       a
-        color color-font2
+        color color-title-font
         &:hover
-          color color-font
+          color color-link
           text-decoration none
 
   .entry
@@ -169,7 +171,7 @@ article
       font-family font-mono
 
     code
-      background #eee
+      background color-block-background
       color #666
       padding 0 5px
       margin 0 2px
@@ -178,7 +180,7 @@ article
       border-radius 3px
 
     pre
-      background #eee
+      background color-block-background
       border 1px solid color-border
       margin-top 15px
       overflow auto
