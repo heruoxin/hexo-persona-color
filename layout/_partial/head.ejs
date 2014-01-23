@@ -2,6 +2,13 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" href="http://ww3.sinaimg.cn/large/66cab368gw1ecpwvwjl3zj20dg0dfq47.jpg">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="http://ww3.sinaimg.cn/large/66cab368gw1ecpwvwjl3zj20dg0dfq47.jpg">
+
   <%
   var title = [];
   if (page.current > 1) title.push(__('page', page.current));
@@ -40,14 +47,6 @@
   <link href="<%- config.root %>favicon.png" rel="icon">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    $('#sidebar').delay(400).animate({ width: '285px' }, 500, function() {
-      $('.personal-info').css({display: 'table'}).hide().fadeIn(500);
-    });
-  });
-  </script>
-  <%- partial('google_analytics') %>
+  <link href="http://cdn.bootcss.com/animate.css/3.0.0/animate.css" rel="stylesheet">
+
 </head>

@@ -1,13 +1,28 @@
-<!-- <div class="alignleft">
-  <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
-  <h2><a href="<%- config.root %>"><% if (config.subtitle){ %><%= config.subtitle %><% } %></a></h2>
+<div class="alignleft personal-info-mini">
+  <a href="<%- config.root %>">
+    <img class="personal-photo personal-info-mini" src="<%- theme.photo %>" alt="<%- config.author %>">
+  </a>
+  <h1 id="title-mini" class="personal-info-mini"><a href="<%- config.root %>"><%= config.title %></a></h1>
 </div>
- --><!-- <nav id="main-nav" class="alignright">
-  <ul>
-    <% for (var i in theme.menu){ %>
-      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+<nav id="main-nav" class="alignright">
+    <% if( theme.twitter.username ) { %>
+      <a target="_blank" class="icon twitter depth personal-info-mini" href="http://twitter.com/<%- theme.twitter.username %>"></a>
     <% } %>
-  </ul>
+    <% if( theme.facebook ) { %>
+      <a target="_blank" class="icon facebook depth personal-info-mini" href="http://fb.com/<%- theme.facebook %>"></a> 
+    <% } %>
+    <% if( theme.googleplus ) { %>
+      <a target="_blank" class="icon googleplus depth personal-info-mini" href="http://plus.google.com/<%- theme.googleplus %>"></a> 
+    <% } %>
+    <% if( theme.github) { %>
+      <a target="_blank" class="icon github depth personal-info-mini" href="http://github.com/<%= theme.github %>"></a>
+    <% } %>
+    <% if( theme.email ) { %>
+      <a target="_blank" class="icon email depth personal-info-mini" href="mailto:<%- theme.email %>"></a>
+    <% } %>
+    <% if( theme.zhihu ) { %>
+      <a target="_blank" class="icon zhihu depth personal-info-mini" href="http://zhihu.com/people/<%- theme.zhihu %>"></a>
+    <% } %>
   <div class="clearfix"></div>
 </nav>
- -->
+

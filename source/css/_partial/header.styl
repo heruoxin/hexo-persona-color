@@ -1,13 +1,28 @@
 #header
-  text-shadow 0 0 1px #fff
-  margin 50px auto
+  width 100%
+  position fixed
+  left 0px
+  z-index 99999
+  @media screen and (min-width: 901px)
+    display: none
+  background-color color-sidebar
+  height 0px
   a
-    color #999
+    color color-info
     &:hover
-      color color-link
-      text-decoration none
-    
+      color color-info
+
+  .personal-info-mini
+    display none
+  #title-mini
+    @media screen and (max-width: 450px)
+      font-size 0em
+
   h1
+    display none
+    position relative
+    left 20px
+    color color-font
     font-weight normal
     font-size 2.5em
     line-height 1
@@ -17,7 +32,15 @@
     font-size 0.9em
     line-height 1
     margin-top 10px
-  
+
+  .personal-photo
+    position relative
+    left 15px
+    top 10px
+    border-radius 50px
+    height 50px
+    width 50px
+    // border 5px
   #main-nav
     font-family font-title
     line-height 2.5em
@@ -26,3 +49,34 @@
       li
         float left
         margin-left 30px
+    .icon
+      position relative
+      font 1.1em font-icon
+      margin 0 auto
+      padding 10px
+      top 25px
+      text-decoration none
+      color color-info
+      font-size 30px
+      &:hover
+        color color-font
+    .github
+      &:before
+        content "\f09b"
+    .googleplus
+      &:before
+        content "\f0d4"
+    .zhihu
+      &:before
+        content "知"
+    .facebook
+      &:before
+        content "\f082"
+    .twitter
+      &:before
+        content "\f099"
+    .email
+      &:before
+        content "\f0e0"
+  
+  
