@@ -1,11 +1,11 @@
 <%- partial('_partial/head') %>
 
 <body>
-  <header id="header" class="header header--fixed hide-from-print animated"><%- partial('_partial/header') %></header>
+  <header id="header" class="header header--fixed hide-from-print animated slideInDown"><%- partial('_partial/header') %></header>
   <div id="content" class="inner">
     <p id="header-fix"></p>
     <div id="main-col" class="alignright"><div id="wrapper"><%- body %></div></div>
-    <aside id="sidebar" class="alignleft"><%- partial('_partial/sidebar') %></aside>
+    <aside id="sidebar" class="alignleft animated slideInLeft"><%- partial('_partial/sidebar') %></aside>
     <div class="clearfix"></div>
   </div>
   <footer id="footer" class="inner"><%- partial('_partial/footer') %></footer>
