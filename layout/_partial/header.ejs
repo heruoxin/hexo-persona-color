@@ -1,12 +1,12 @@
 <div class="alignleft personal-info-mini">
   <a href="<%- config.root %>">
-    <img class="personal-photo personal-info-mini" src="<%- theme.photo %>" alt="<%- config.author %>">
+    <img id="icon-photo-small" class="personal-photo personal-info-mini animated rotateIn" src="<%- theme.photo %>" alt="<%- config.author %>">
   </a>
   <h1 id="title-mini" class="personal-info-mini"><a href="<%- config.root %>"><%= config.title %></a></h1>
 </div>
 <nav id="main-nav" class="alignright">
-    <% if( theme.twitter.username ) { %>
-      <a target="_blank" class="icon twitter depth personal-info-mini" href="http://twitter.com/<%- theme.twitter.username %>"></a>
+    <% if( theme.twitter ) { %>
+      <a target="_blank" class="icon twitter depth personal-info-mini" href="http://twitter.com/<%- theme.twitter %>"></a>
     <% } %>
     <% if( theme.facebook ) { %>
       <a target="_blank" class="icon facebook depth personal-info-mini" href="http://fb.com/<%- theme.facebook %>"></a> 

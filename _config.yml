@@ -1,24 +1,15 @@
 menu:
   Archives: /archives
 
-widgets: 
-# - search
-- category
-- tag
-- twitter
 
 excerpt_link: Read More
 
-twitter:
-  username: little_cup
-  show_replies: true
-  tweet_count: 5
-
-#facebook: your facebook url
-#github: thiagopnts
+twitter: little_cup
+facebook: 
+github: 
 email: 
-about: "Hello, this is a test……"
-photo: http://ww3.sinaimg.cn/large/66cab368gw1ecpwvwjl3zj20dg0dfq47.jpg
+about: "Still testing……"
+photo: /icon.jpg
 googleplus: "+RuoxinHe"
 zhihu: littlecup
 
@@ -31,6 +22,9 @@ addthis:
   pinterest: true
 
 fancybox: true
+
+#enable to use cdnjs
+usecdn: false
 
 google_analytics: UA-46393541-1
 rss: /atom.xml

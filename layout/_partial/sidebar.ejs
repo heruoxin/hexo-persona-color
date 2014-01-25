@@ -1,11 +1,8 @@
-<!-- <% theme.widgets.forEach(function(widget){ %>
-  <%- partial('../_widget/' + widget) %>
-<% }); %> -->
 <div class="personal-info">
   <figure>
     <% if(theme.photo) { %>
       <a href="<%- config.root %>">
-        <img class="personal-photo" src="<%- theme.photo %>" alt="<%- config.author %>">
+        <img id="icon-photo-normal" class="personal-photo animated rotateIn" src="<%- theme.photo %>" alt="<%- config.author %>">
       </a>
     <% } %>
     <figcaption>
@@ -14,8 +11,8 @@
     </figcaption>
   </figure>
   <section class="social">
-    <% if( theme.twitter.username ) { %>
-      <a target="_blank" class="icon twitter depth" href="http://twitter.com/<%- theme.twitter.username %>"></a>
+    <% if( theme.twitter ) { %>
+      <a target="_blank" class="icon twitter depth" href="http://twitter.com/<%- theme.twitter %>"></a>
     <% } %>
     <% if( theme.facebook ) { %>
       <a target="_blank" class="icon facebook depth" href="http://fb.com/<%- theme.facebook %>"></a> 
