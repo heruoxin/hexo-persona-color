@@ -1,27 +1,28 @@
-<div class="alignleft personal-info-mini">
+<div class="alignleft ">
   <a href="<%- config.root %>">
-    <img id="icon-photo-small" class="personal-photo personal-info-mini animated rotateIn" src="<%- theme.photo %>" alt="<%- config.author %>">
+    <img id="icon-photo-small" class="personal-photo  animated rotateIn" src="<%- theme.photo %>" alt="<%- config.author %>">
   </a>
-  <h1 id="title-mini" class="personal-info-mini"><a href="<%- config.root %>"><%= config.title %></a></h1>
+  <h1 id="title-mini" class=""><a href="<%- config.root %>"><%= config.title %></a></h1>
 </div>
-<nav id="main-nav" class="alignright">
+<a target="_blank" id="mini-toggle" class="more icon alignright"></a>
+<nav id="main-nav" class="alignright animated slideInRight">
     <% if( theme.twitter ) { %>
-      <a target="_blank" class="icon twitter depth personal-info-mini" href="http://twitter.com/<%- theme.twitter %>"></a>
+      <a target="_blank" class="icon twitter" href="http://twitter.com/<%- theme.twitter %>"></a>
     <% } %>
     <% if( theme.facebook ) { %>
-      <a target="_blank" class="icon facebook depth personal-info-mini" href="http://fb.com/<%- theme.facebook %>"></a> 
+      <a target="_blank" class="icon facebook" href="http://fb.com/<%- theme.facebook %>"></a> 
     <% } %>
     <% if( theme.googleplus ) { %>
-      <a target="_blank" class="icon googleplus depth personal-info-mini" href="http://plus.google.com/<%- theme.googleplus %>"></a> 
+      <a target="_blank" class="icon googleplus" href="http://plus.google.com/<%- theme.googleplus %>"></a> 
     <% } %>
     <% if( theme.github) { %>
-      <a target="_blank" class="icon github depth personal-info-mini" href="http://github.com/<%= theme.github %>"></a>
+      <a target="_blank" class="icon github" href="http://github.com/<%= theme.github %>"></a>
     <% } %>
     <% if( theme.email ) { %>
-      <a target="_blank" class="icon email depth personal-info-mini" href="mailto:<%- theme.email %>"></a>
+      <a target="_blank" class="icon email" href="mailto:<%- theme.email %>"></a>
     <% } %>
     <% if( theme.zhihu ) { %>
-      <a target="_blank" class="icon zhihu depth personal-info-mini" href="http://zhihu.com/people/<%- theme.zhihu %>"></a>
+      <a target="_blank" class="icon zhihu" href="http://zhihu.com/people/<%- theme.zhihu %>"></a>
     <% } %>
   <div class="clearfix"></div>
 </nav>

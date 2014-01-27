@@ -1,17 +1,17 @@
 
 #sidebar
-  width 285px
+  width 325px
   line-height 1.8em
   position fixed
   right 70%
   top 0
   left 0px
-  border-right solid 1px #93f2dd
+  border-right solid 1px color-transition
   height 100%
   background-color color-sidebar
-  background #1b7aca
+  background color-sidebar
   box-shadow 0px 0 0 0 #222
-  @media screen and (max-width: 900px)
+  @media screen and (max-width: 800px)
     // float none
     // width 10%
     display none
@@ -38,10 +38,10 @@
     a
       color color-info
   .personal-info figure
-    border-bottom solid 1px #1b7aca
+    border-bottom solid 1px color-sidebar
   .social
     text-indent 0
-    border-top solid 1px #1b7aca
+    border-top solid 1px color-sidebar
     width: 200px
   .personal-photo
     border-radius 150px
@@ -116,14 +116,14 @@
       border 1px solid color-border
       width 100%
       box-sizing border-box
-      color color-meta
+      color #999 
       &:focus
         color color-font
 
   .tag
     small
       margin-left 15px
-      color color-meta
+      color #999 
       &:before
         content '('
       &:after
@@ -139,7 +139,7 @@
     small
       display block
       margin-top 10px
-      color color-meta
+      color #999 
       line-height 1
 
   .tagcloud

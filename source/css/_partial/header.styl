@@ -3,10 +3,10 @@
   position fixed
   left 0px
   z-index 99999
-  @media screen and (min-width: 901px)
-    display: none
+  @media screen and (min-width: 801px)
+    display none
   background-color color-sidebar
-  height 75px
+  height 66px
   a
     color color-info
     &:hover
@@ -15,7 +15,7 @@
   .personal-info-mini
   #title-mini
     @media screen and (max-width: 450px)
-      font-size 0em
+      font-size 2.3em
 
   h1
     display inline
@@ -43,20 +43,28 @@
   #main-nav
     font-family font-title
     line-height 2.5em
+    @media screen and (max-width: 501px)
+      display none
+      top 5px
     ul
       list-style none
       li
         float left
         margin-left 30px
     .icon
+      @media screen and (min-width: 600px)
+        font-size 30px
+        top 18px
+      @media screen and (max-width: 601px)
+        font-size 28px
+        top 20px
+      background-color color-sidebar
       position relative
       font 1.1em font-icon
       margin 0 auto
       padding 10px
-      top 25px
       text-decoration none
       color color-info
-      font-size 30px
       &:hover
         color color-font
     .github
@@ -77,5 +85,17 @@
     .email
       &:before
         content "\f0e0"
-  
-  
+.more
+  &:before
+    content "\f039"
+  display none
+  @media screen and (max-width: 501px)
+    display inline
+  position relative
+  font 2.1em font-icon
+  margin 0 auto
+  padding 10px
+  top 18px
+  text-decoration none
+  color color-info
+
