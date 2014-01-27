@@ -3,6 +3,19 @@
 <script src="<%- config.root %>js/headroom.min.and.gallery.js"></script>
 
 <script>
+$("#mini-toggle").click(function () {
+    $( "#main-nav" ).css("display","inline");
+    setTimeout(function(){
+        $( "#main-nav" ).removeClass("slideInRight").addClass("slideOutRight");
+    }, 3000);
+    setTimeout(function(){
+        $( "#main-nav" ).css("display","");
+        $( "#main-nav" ).removeClass("slideOutRight").addClass("slideInRight");
+    }, 3555);
+});
+</script>
+
+<script>
 $("#header").headroom({
   "tolerance": 5,
   "offset": 205,

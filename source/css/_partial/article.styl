@@ -31,7 +31,7 @@ article
       a
         &:after
           content '\f08e'
-          color color-meta
+          color #999 
           font 12px font-icon
           padding-left 10px
           vertical-align super
@@ -124,13 +124,15 @@ article
         text-align center
 
     time
-      color color-meta
+      color #999 
       font 0.9em font-title
       margin-bottom 5px
       display block
       line-height 1
 
     .title
+      @media screen and (max-width: 450px)
+        font-size 1.35em
       font-weight normal
       display inline
       color color-title-font
@@ -218,7 +220,7 @@ article
     .caption
       display block
       margin-top 5px
-      color color-meta
+      color #999 
       position relative
       font-size 0.9em
       padding-left 25px
@@ -260,13 +262,13 @@ article
     margin-top 15px
     padding-top 10px
     border-top 1px solid color-border
-    color color-meta
+    color #999 
     font-size 0.9em
     line-height 16px
     position relative
     min-height 16px
     a
-      color color-meta
+      color #999 
       &:hover
         color color-link
         text-decoration none
