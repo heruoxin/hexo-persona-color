@@ -1,17 +1,21 @@
-menu:
-  Archives: /archives
+#You can eidt the color scheme in source/css/_base/variable.styl
+
+photo: /icon.jpg
+about: "Still testing……"
 
 
-excerpt_link: Read More
-
+email: 
 twitter: little_cup
 facebook: 
-github: 
-email: 
-about: "Still testing……"
-photo: /icon.jpg
 googleplus: "+RuoxinHe"
+github: 
+pinterest: 
+linkedin: 
+instagram: 
 zhihu: littlecup
+weibo: 
+renren: 
+
 
 addthis:
   enable: false
@@ -23,7 +27,10 @@ addthis:
 
 fancybox: true
 
-#enable to use cdnjs
+#
+bighomepage: true
+
+#Use cdnjs' CDN
 usecdn: false
 
 google_analytics: UA-46393541-1

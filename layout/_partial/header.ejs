@@ -1,4 +1,4 @@
-<div class="alignleft ">
+<div class="alignleft backtohome">
   <a href="<%- config.root %>">
     <img id="icon-photo-small" class="personal-photo  animated rotateIn" src="<%- theme.photo %>" alt="<%- config.author %>">
   </a>
@@ -6,6 +6,10 @@
 </div>
 <a target="_blank" id="mini-toggle" class="more icon alignright"></a>
 <nav id="main-nav" class="alignright animated slideInRight">
+
+    <% if( theme.email ) { %>
+      <a target="_blank" class="icon email" href="mailto:<%- theme.email %>"></a>
+    <% } %>
     <% if( theme.twitter ) { %>
       <a target="_blank" class="icon twitter" href="http://twitter.com/<%- theme.twitter %>"></a>
     <% } %>
@@ -18,11 +22,23 @@
     <% if( theme.github) { %>
       <a target="_blank" class="icon github" href="http://github.com/<%= theme.github %>"></a>
     <% } %>
-    <% if( theme.email ) { %>
-      <a target="_blank" class="icon email" href="mailto:<%- theme.email %>"></a>
+    <% if( theme.pinterest ) { %>
+      <a target="_blank" class="icon pinterest" href="http://www.pinterest.com/<%- theme.pinterest %>"></a>
+    <% } %>
+    <% if( theme.linkedin ) { %>
+      <a target="_blank" class="icon linkedin" href="http://www.linkedin.com/<%- theme.linkedin %>"></a>
+    <% } %>
+    <% if( theme.instagram ) { %>
+      <a target="_blank" class="icon instagram" href="http://instagram,com/<%- theme.instagram %>"></a>
     <% } %>
     <% if( theme.zhihu ) { %>
       <a target="_blank" class="icon zhihu" href="http://zhihu.com/people/<%- theme.zhihu %>"></a>
+    <% } %>
+    <% if( theme.weibo ) { %>
+      <a target="_blank" class="icon weibo" href="http://weibo.cn/<%- theme.weibo %>"></a>
+    <% } %>
+    <% if( theme.renren ) { %>
+      <a target="_blank" class="icon renren" href="http://renren/profile/<%- theme.renren %>"></a>
     <% } %>
   <div class="clearfix"></div>
 </nav>

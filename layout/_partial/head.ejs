@@ -52,5 +52,13 @@
   <% } else { %>
     <link href="<%- config.root %>css/animate.css" rel="stylesheet">
   <% } %>
+  <% if (theme.usecdn){ %>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+  <% } else { %>
+    <script src="<%- config.root %>js/jquery-2.0.3.min.js"></script>
+  <% } %>
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+
 
 </head>

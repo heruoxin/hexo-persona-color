@@ -1,9 +1,11 @@
 <div class="personal-info">
   <figure>
     <% if(theme.photo) { %>
+    <div  class="backtohome">
       <a href="<%- config.root %>">
         <img id="icon-photo-normal" class="personal-photo animated rotateIn" src="<%- theme.photo %>" alt="<%- config.author %>">
       </a>
+    </div>
     <% } %>
     <figcaption>
       <h3 class=><%- config.author %></h3>
@@ -11,6 +13,9 @@
     </figcaption>
   </figure>
   <section class="social">
+    <% if( theme.email ) { %>
+      <a target="_blank" class="icon email depth" href="mailto:<%- theme.email %>"></a>
+    <% } %>
     <% if( theme.twitter ) { %>
       <a target="_blank" class="icon twitter depth" href="http://twitter.com/<%- theme.twitter %>"></a>
     <% } %>
@@ -23,11 +28,23 @@
     <% if( theme.github) { %>
       <a target="_blank" class="icon github depth" href="http://github.com/<%= theme.github %>"></a>
     <% } %>
-    <% if( theme.email ) { %>
-      <a target="_blank" class="icon email depth" href="mailto:<%- theme.email %>"></a>
+    <% if( theme.pinterest ) { %>
+      <a target="_blank" class="icon pinterest depth" href="http://www.pinterest.com/<%- theme.pinterest %>"></a>
+    <% } %>
+    <% if( theme.linkedin ) { %>
+      <a target="_blank" class="icon linkedin depth" href="http://www.linkedin.com/<%- theme.linkedin %>"></a>
+    <% } %>
+    <% if( theme.instagram ) { %>
+      <a target="_blank" class="icon instagram depth" href="http://instagram,com/<%- theme.instagram %>"></a>
     <% } %>
     <% if( theme.zhihu ) { %>
       <a target="_blank" class="icon zhihu depth" href="http://zhihu.com/people/<%- theme.zhihu %>"></a>
+    <% } %>
+    <% if( theme.weibo ) { %>
+      <a target="_blank" class="icon weibo depth" href="http://weibo.cn/<%- theme.weibo %>"></a>
+    <% } %>
+    <% if( theme.renren ) { %>
+      <a target="_blank" class="icon renren depth" href="http://renren/profile/<%- theme.renren %>"></a>
     <% } %>
   </section>
 </div>

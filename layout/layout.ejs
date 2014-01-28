@@ -2,12 +2,13 @@
 
 <body>
   <header id="header" class="header header--fixed hide-from-print animated slideInDown"><%- partial('_partial/header') %></header>
+  <aside id="sidebar" class="alignleft animated slideInLeft"><%- partial('_partial/sidebar') %></aside>
   <div id="content" class="inner">
     <p id="header-fix"></p>
     <div id="main-col" class="alignright"><div id="wrapper"><%- body %></div></div>
-    <aside id="sidebar" class="alignleft animated slideInLeft"><%- partial('_partial/sidebar') %></aside>
     <div class="clearfix"></div>
   </div>
+
   <footer id="footer" class="inner"><%- partial('_partial/footer') %></footer>
   <%- partial('_partial/after_footer') %>
 </body>

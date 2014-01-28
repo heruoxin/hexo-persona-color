@@ -1,7 +1,6 @@
 <% page.posts.each(function(item){ %>
   
-  <div class="archive">
-    
+  <div class="archive titlelist">
     <article class="<%= item.layout %>">
       <div class="post-content">
         <header>
@@ -13,15 +12,76 @@
                 <h2 class="title link"><a href="<%- item.link %>" target="_blank"><%= item.link %></a></h2>
               <% } %>
             <% } else { %>
-              <a href="<%- config.root %><%- item.path %>"><div class="icon depth"></div> </a>
+              <div class="icon depth"><a href="<%- config.root %><%- item.path %>"> </a></div>
               <h2 class="depth title" ><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h2>
             <% } %>
-            <time class="time title depth" datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+            <time class="time title depth" datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
           </header>
       </div>
     </article>
   </div>
-  
+
+  <% if (theme.bighomepage){ %>
+    <div class="<%= item.title.replace(/\s+/g,"") %> detail" style="display: none;">
+      <%- partial('_partial/article', {item: item, index: false}) %>
+      <nav id="pagination">
+        <a href="<%- config.root %><%- item.path %>#comment" class="alignright next">View & Post Comments</a>
+        <div class="clearfix"></div>
+      </nav>
+    </div>
+  <% } %>
+
 <% }); %>
+
+
+
+<% if (theme.bighomepage){ %>
+  <script>
+  $(".archive").click(function (e) {
+      if ($("title").text() == "<%- config.title %>"){
+          if (e.target.href){
+              setTimeout(function(){
+                  var pagelink=e.target.innerText;
+                  loadpage(pagelink);
+                  history.pushState( pagelink, $("title").text(), e.target.href);
+              }, 150);
+          }
+      }
+      return false;
+  });
+  </script>
+  <script>
+  $(".backtohome").click(function () {
+      if ($("title").text() != "<%- config.title %>"){
+          setTimeout(function(){
+              loadpage();
+              history.pushState( null, $("title").text(), "/");
+          }, 150);
+      }
+      return false;
+  });
+  </script>
+  <script>
+  function loadpage(pagelink) {
+      $( "#icon-photo-small"  ).addClass( "rotateIn" );
+      $( "#icon-photo-normal" ).addClass( "rotateIn" );
+      if (pagelink){
+          $("title").text(pagelink + " | <%- config.title %>");
+          $(".titlelist").css("display","none");
+          $("." + pagelink.replace(/\s+/g,"")).css("display","")
+      } else {
+          $("title").text("<%- config.title %>");
+          $(".detail").css("display","none");
+          $(".titlelist").css("display","");
+      }
+  };
+  </script>
+  <script>
+  window.addEventListener('popstate', function(e) {
+          loadpage(e.state);
+      },false);
+  </script>
+<% } %>
+
 
 <%- partial('_partial/pagination') %>
