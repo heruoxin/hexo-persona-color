@@ -2,7 +2,7 @@
   width 100%
   position fixed
   left 0px
-  z-index 99999
+  z-index 9999
   @media screen and (min-width: 801px)
     display none
   background-color color-sidebar
@@ -42,7 +42,6 @@
     // border 5px
   #main-nav
     font-family font-title
-    line-height 2.5em
     @media screen and (max-width: 501px)
       display none
       top 5px
@@ -58,8 +57,8 @@
       @media screen and (max-width: 601px)
         font-size 28px
         top 20px
-      background-color color-sidebar
       position relative
+      background-color color-sidebar
       font 1.1em font-icon
       margin 0 auto
       padding 10px
@@ -85,10 +84,35 @@
     .email
       &:before
         content "\f0e0"
+    .weibo
+      &:before
+        content "\f18a"
+    .renren
+      &:before
+        content "\f18b"
+    .pinterest
+      &:before
+        content "\f0d3"
+    .linkedin
+      &:before
+        content "\f0e1"
+    .instagram
+      &:before
+        content "\f16d"
+  
+
+
 .more
   &:before
-    content "\f039"
+    content "\f0c9"
+  &:hover
+    color color-title
+    text-decoration none
+  &:link
+    color color-title
+    text-decoration none
   display none
+  text-decoration none
   @media screen and (max-width: 501px)
     display inline
   position relative

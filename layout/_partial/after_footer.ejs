@@ -1,7 +1,4 @@
-<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
 <script src="<%- config.root %>js/headroom.min.and.gallery.js"></script>
-
 <script>
 $("#mini-toggle").click(function () {
     $( "#main-nav" ).css("display","inline");
@@ -17,8 +14,8 @@ $("#mini-toggle").click(function () {
 
 <script>
 $("#header").headroom({
-  "tolerance": 5,
-  "offset": 205,
+  "tolerance": 0,
+  "offset": 200,
   "classes": {
     "initial": "",
     "pinned": "slideInDown",
@@ -35,7 +32,7 @@ $("a").click(function () {
     setTimeout(function(){
         $( "#icon-photo-small"  ).removeClass( "rotateOut" ).addClass( "rotateIn" );
         $( "#icon-photo-normal" ).removeClass( "rotateOut" ).addClass( "rotateIn" );
-    }, 2000);
+    }, 900);
 });
 </script>
 
