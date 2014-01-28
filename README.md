@@ -9,7 +9,7 @@ Theme for [Hexo].
 Execute the following command and modify `theme` in `_config.yml` to `persona-dark`.
 
 ```
-git clone git://github.com/thiagopnts/hexo-persona-dark.git themes/persona-dark
+git clone git://github.com/heruoxin/hexo-persona-color.git themes/persona-color
 ```
 
 ## Update
@@ -17,7 +17,7 @@ git clone git://github.com/thiagopnts/hexo-persona-dark.git themes/persona-dark
 Execute the following command to update Persona Dark.
 
 ```
-cd themes/persona-dark
+cd themes/persona-color
 git pull
 ```
 
@@ -25,26 +25,27 @@ git pull
 
 Default config:
 
-``` yaml
-menu:
-  Home: /
-  Archives: /archives
+``` 
 
-widgets:
-- search
-- category
-- tag
-- twitter
+photo: /icon.jpg
+about: "Something about you"
 
-excerpt_link: Read More
 
-twitter:
-  username:
-  show_replies: false
-  tweet_count: 5
+email: 
+twitter: 
+facebook: 
+googleplus: 
+github: 
+pinterest: 
+linkedin: 
+instagram: 
+zhihu: 
+weibo: 
+renren: 
+
 
 addthis:
-  enable: true
+  enable: false
   pubid:
   facebook: true
   twitter: true
@@ -53,26 +54,30 @@ addthis:
 
 fancybox: true
 
-google_analytics:
-rss:
+bighomepage: true
+
+usecdn: true
+
+google_analytics: 
+rss: /atom.xml
 ```
 
-- **menu** - Main navigation menu
-- **widget** - Widgets displaying in sidebar
-- **excerpt_link** - "Read More" link text at the bottom of excerpted articles
-- **twitter** - Twitter widget config
-  - **username** - Twitter username
-  - **show_replies** - Enable displaying replies
-  - **tweet_count** - Tweets display in widget
-- **addthis** - Share buttons at the buttom of articles (Powered by [AddThis])
-  - **enable** - Enable share buttons
-  - **pubid** - Profile ID of [AddThis]
-  - **facebook** - Enable Facebook button
-  - **twitter** - Enable Twitter button
-  - **google** - Enable Google+ button
-  - **pinterest** - Enable Pinterest button
+- **photo** - Your Photo. The best size is 340x340.
+- **twitter** - Your twitter username,will show on the sidebar (Desktop view) or the header (Mobile view).
+- **facebook and etc.** - Smae as twitter.
+
+
+- **addthis** - Share buttons at the buttom of articles (Powered by [AddThis]).
+  - **enable** - Enable share buttons (true/false).
+  - **pubid** - Profile ID of [AddThis].
+  - **facebook** - Enable Facebook button.
+  - **twitter** - Enable Twitter button.
+  - **google** - Enable Google+ button.
+  - **pinterest** - Enable Pinterest button.
 - **fancybox** - Enable [Fancybox]
-- **google_analytics** - Google Analytics ID
+- **bighomepage** - Using html5 history.pushState API to get better user experience. But may slow down the homepage.
+- **usecdn** - Use CNDJS and some other CDN to improve a few loading speed. You can disable it if your web server is fast.
+- **google_analytics** - Google Analytics ID(example: UA-xxxxxxxx-x)
 - **rss** - RSS subscription link (change if using Feedburner)
 
 
