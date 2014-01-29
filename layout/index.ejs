@@ -2,7 +2,7 @@
   
   <div class="archive titlelist">
     <article class="<%= item.layout %>">
-      <div class="post-content">
+      <div class="post-content animated fadeIn">
         <header>
             <% if (item.link){ %>
               <a href="<%- config.root %><%- item.path %>"><div class="icon"></div></a>
@@ -13,7 +13,7 @@
               <% } %>
             <% } else { %>
               <div class="icon depth"><a href="<%- config.root %><%- item.path %>"> </a></div>
-              <h2 class="depth title" ><a href="<%- config.root %><%- item.path %>"><%= item.title %></a></h2>
+              <h2 class="depth title" ><a class="animated" href="<%- config.root %><%- item.path %>"><%= item.title %></a></h2>
             <% } %>
             <time class="time title depth" datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
           </header>
@@ -22,7 +22,7 @@
   </div>
 
   <% if (theme.bighomepage){ %>
-    <div class="<%= item.title.replace(/\s+/g,"") %> detail" style="display: none;">
+    <div class="<%= item.title.replace(/\s+/g,"") %> detail animated fadeIn" style="display: none;">
       <%- partial('_partial/article', {item: item, index: false}) %>
       <nav id="pagination">
         <a href="<%- config.root %><%- item.path %>#comment" class="alignright next">View & Post Comments</a>
@@ -40,11 +40,13 @@
   $(".archive").click(function (e) {
       if ($("title").text() == "<%- config.title %>"){
           if (e.target.href){
+              $(".animated:contains(\'"+e.target.innerText+"\')").addClass("bounceOut");
               setTimeout(function(){
                   var pagelink=e.target.innerText;
                   loadpage(pagelink);
+                  $(".animated:contains(\'"+e.target.innerText+"\')").removeClass("bounceOut");
                   history.pushState( pagelink, $("title").text(), e.target.href);
-              }, 150);
+              }, 500);
           }
       }
       return false;
@@ -63,8 +65,6 @@
   </script>
   <script>
   function loadpage(pagelink) {
-      $( "#icon-photo-small"  ).addClass( "rotateIn" );
-      $( "#icon-photo-normal" ).addClass( "rotateIn" );
       if (pagelink){
           $("title").text(pagelink + " | <%- config.title %>");
           $(".titlelist").css("display","none");
