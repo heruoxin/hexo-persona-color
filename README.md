@@ -18,7 +18,7 @@ git clone git://github.com/heruoxin/hexo-persona-color.git themes/persona-color
 
 ## Update
 
-Execute the following command to update Persona Dark.
+Execute the following command to update Persona Color.
 
 ```
 cd themes/persona-color
