@@ -4,6 +4,10 @@ Theme for [Hexo].
 
 [Demo]
 
+![4 color schemes](http://ww3.sinaimg.cn/large/66cab368gw1ed07yp2yjfj21400mi7a2.jpg)
+
+You can eidt the color schemes in `themes/persona-color/source/css/_base/variable.styl`
+
 ## Install
 
 Execute the following command and modify `theme` in `_config.yml` to `persona-dark`.
@@ -53,9 +57,7 @@ addthis:
   pinterest: true
 
 fancybox: true
-
 bighomepage: true
-
 usecdn: true
 
 google_analytics: 
@@ -64,9 +66,7 @@ rss: /atom.xml
 
 - **photo** - Your Photo. The best size is 340x340.
 - **twitter** - Your twitter username,will show on the sidebar (Desktop view) or the header (Mobile view).
-- **facebook and etc.** - Smae as twitter.
-
-
+- **facebook and etc.** - Same as twitter.
 - **addthis** - Share buttons at the buttom of articles (Powered by [AddThis]).
   - **enable** - Enable share buttons (true/false).
   - **pubid** - Profile ID of [AddThis].
