@@ -1,4 +1,4 @@
-# Persona Dark
+# Persona Color
 
 Theme for [Hexo].
 
@@ -10,7 +10,7 @@ You can eidt the color schemes in `themes/persona-color/source/css/_base/variabl
 
 ## Install
 
-Execute the following command and modify `theme` in `_config.yml` to `persona-dark`.
+Execute the following command and modify `theme` in `_config.yml` to `persona-color`.
 
 ```
 git clone git://github.com/heruoxin/hexo-persona-color.git themes/persona-color
