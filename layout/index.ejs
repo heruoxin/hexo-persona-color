@@ -1,5 +1,4 @@
 <% page.posts.each(function(item){ %>
-  
   <div class="archive titlelist">
     <article class="<%= item.layout %>">
       <div class="post-content animated fadeIn">
@@ -20,20 +19,18 @@
       </div>
     </article>
   </div>
-
   <% if (theme.bighomepage){ %>
     <div class="<%= item.title.replace(/\s+/g,"") %> detail animated fadeIn" style="display: none;">
-      <%- partial('_partial/article', {item: item, index: false}) %>
+    <div class="<%= item.title.replace(/\s+/g,"") %> details">
+      <%- partial('_partial/article', {item: item, index: false}).replace(/img\ src/g, "img s1c") %>
       <nav id="pagination">
         <a href="<%- config.root %><%- item.path %>#comment" class="alignright next">View & Post Comments</a>
         <div class="clearfix"></div>
       </nav>
     </div>
+    </div>
   <% } %>
-
 <% }); %>
-
-
 
 <% if (theme.bighomepage){ %>
   <script>
@@ -63,12 +60,14 @@
       return false;
   });
   </script>
+
   <script>
   function loadpage(pagelink) {
       if (pagelink){
           $("title").text(pagelink + " | <%- config.title %>");
           $(".titlelist").css("display","none");
-          $("." + pagelink.replace(/\s+/g,"")).css("display","")
+          $("." + pagelink.replace(/\s+/g,"") + ".detail").css("display","");
+          $("." + pagelink.replace(/\s+/g,"") + ".details").replaceWith($("." + pagelink.replace(/\s+/g,"") + ".detail").html().replace(/img\ s1c/g, "img src"));
       } else {
           $("title").text("<%- config.title %>");
           $(".detail").css("display","none");
