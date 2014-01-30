@@ -20,8 +20,8 @@
     </article>
   </div>
   <% if (theme.bighomepage){ %>
-    <div class="<%= item.title.replace(/\s+/g,"") %> detail animated fadeIn" style="display: none;">
-    <div class="<%= item.title.replace(/\s+/g,"") %> details">
+    <div class="animated fadeIn" idplus="<%= item.title.replace(/\s+/g,"") %>" style="display: none;">
+    <div idplusp="<%= item.title.replace(/\s+/g,"") %>">
       <%- partial('_partial/article', {item: item, index: false}).replace(/img\ src/g, "img s1c") %>
       <nav id="pagination">
         <a href="<%- config.root %><%- item.path %>#comment" class="alignright next">View & Post Comments</a>
@@ -37,12 +37,13 @@
   $(".archive").click(function (e) {
       if ($("title").text() == "<%- config.title %>"){
           if (e.target.href){
-              $(".animated:contains(\'"+e.target.innerText+"\')").addClass("bounceOut");
+              $(".animated:contains(\'"+e.target.text+"\')").addClass("bounceOut");
               setTimeout(function(){
-                  var pagelink=e.target.innerText;
-                  loadpage(pagelink);
-                  $(".animated:contains(\'"+e.target.innerText+"\')").removeClass("bounceOut");
-                  history.pushState( pagelink, $("title").text(), e.target.href);
+                  var pageTitle=e.target.text;
+                  console.log(e);
+                  loadpage(pageTitle);
+                  $(".animated:contains(\'"+e.target.text+"\')").removeClass("bounceOut");
+                  history.pushState( pageTitle, $("title").text(), e.target.href);
               }, 500);
           }
       }
@@ -62,15 +63,16 @@
   </script>
 
   <script>
-  function loadpage(pagelink) {
-      if (pagelink){
-          $("title").text(pagelink + " | <%- config.title %>");
+  function loadpage(pageTitle) {
+      if (pageTitle){
+          $("title").text(pageTitle + " | <%- config.title %>");
+          var pageIDplus=pageTitle.replace(/\s+/g,"")
           $(".titlelist").css("display","none");
-          $("." + pagelink.replace(/\s+/g,"") + ".detail").css("display","");
-          $("." + pagelink.replace(/\s+/g,"") + ".details").replaceWith($("." + pagelink.replace(/\s+/g,"") + ".detail").html().replace(/img\ s1c/g, "img src"));
+          $("[idplus=\'" + pageIDplus +"\']" ).css("display","");
+          $("[idplusp=\'" + pageIDplus +"\']" ).replaceWith($("[idplus=\'" + pageIDplus +"\']").html().replace(/img\ s1c/g, "img src"));
       } else {
           $("title").text("<%- config.title %>");
-          $(".detail").css("display","none");
+          $("[idplus]").css("display","none");
           $(".titlelist").css("display","");
       }
   };

@@ -1,6 +1,11 @@
 <%- partial('_partial/head') %>
 
 <body>
+<!--[if lt IE7]>
+<script>
+alert("Do Not Use IE6!\n请别用IE6！");
+</script>
+< ![endif]-->
   <header id="header" class="header header--fixed hide-from-print animated slideInDown"><%- partial('_partial/header') %></header>
   <aside id="sidebar" class="alignleft animated slideInLeft"><%- partial('_partial/sidebar') %></aside>
   <div id="content" class="inner">
