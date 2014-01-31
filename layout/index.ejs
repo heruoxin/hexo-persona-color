@@ -24,7 +24,7 @@
     <div idplusp="<%= item.title.replace(/\s+/g,"") %>">
       <%- partial('_partial/article', {item: item, index: false}).replace(/img\ src/g, "img s1c") %>
       <nav id="pagination">
-        <a href="<%- config.root %><%- item.path %>#comment" class="alignright next">View & Post Comments</a>
+        <a href="<%- config.url %><%- config.root %><%- item.path %>#comment" class="alignright next">View & Post Comments</a>
         <div class="clearfix"></div>
       </nav>
     </div>
@@ -32,57 +32,6 @@
   <% } %>
 <% }); %>
 
-<% if (theme.bighomepage){ %>
-  <script>
-  $(".archive").click(function (e) {
-      if ($("title").text() == "<%- config.title %>"){
-          if (e.target.href){
-              $(".animated:contains(\'"+e.target.text+"\')").addClass("bounceOut");
-              setTimeout(function(){
-                  var pageTitle=e.target.text;
-                  console.log(e);
-                  loadpage(pageTitle);
-                  $(".animated:contains(\'"+e.target.text+"\')").removeClass("bounceOut");
-                  history.pushState( pageTitle, $("title").text(), e.target.href);
-              }, 500);
-          }
-      }
-      return false;
-  });
-  </script>
-  <script>
-  $(".backtohome").click(function () {
-      if ($("title").text() != "<%- config.title %>"){
-          setTimeout(function(){
-              loadpage();
-              history.pushState( null, $("title").text(), "/");
-          }, 150);
-      }
-      return false;
-  });
-  </script>
-
-  <script>
-  function loadpage(pageTitle) {
-      if (pageTitle){
-          $("title").text(pageTitle + " | <%- config.title %>");
-          var pageIDplus=pageTitle.replace(/\s+/g,"")
-          $(".titlelist").css("display","none");
-          $("[idplus=\'" + pageIDplus +"\']" ).css("display","");
-          $("[idplusp=\'" + pageIDplus +"\']" ).replaceWith($("[idplus=\'" + pageIDplus +"\']").html().replace(/img\ s1c/g, "img src"));
-      } else {
-          $("title").text("<%- config.title %>");
-          $("[idplus]").css("display","none");
-          $(".titlelist").css("display","");
-      }
-  };
-  </script>
-  <script>
-  window.addEventListener('popstate', function(e) {
-          loadpage(e.state);
-      },false);
-  </script>
-<% } %>
-
 
 <%- partial('_partial/pagination') %>
+<%- partial('_partial/bighomepage') %>

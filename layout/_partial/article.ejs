@@ -6,7 +6,7 @@
     <header>
       <% if (item.layout != 'page'){ %>
         <div class="icon depth"></div>
-        <time class="depth backtohome" datetime="<%= item.date.toDate().toISOString() %>"><a href="<%- config.root %><%- item.path %>"><%= item.date.format(config.date_format) %></a></time>
+        <time class="depth" datetime="<%= item.date.toDate().toISOString() %>"><a href="#"><%= item.date.format(config.date_format) %></a></time>
       <% } %>
       <%- partial('post/title') %>
     </header>

@@ -32,8 +32,6 @@ Default config:
 ``` 
 
 photo: /icon.jpg
-about: "Something about you"
-
 
 email: 
 twitter: 
@@ -46,7 +44,6 @@ instagram:
 zhihu: 
 weibo: 
 renren: 
-
 
 addthis:
   enable: false
