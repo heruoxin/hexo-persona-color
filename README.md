@@ -73,7 +73,7 @@ rss: /atom.xml
   - **pinterest** - Enable Pinterest button.
 - **fancybox** - Enable [Fancybox]
 - **bighomepage** - Using html5 history.pushState API to get better user experience. But may slow down the homepage.
-- **usecdn** - Use CNDJS and some other CDN to improve a few loading speed. You can disable it if your web server is fast.
+- **usecdn** - Using CNDJS and some other CDN to improve a few loading speed. You can disable it if your web server is fast.
 - **google_analytics** - Google Analytics ID(example: UA-xxxxxxxx-x)
 - **rss** - RSS subscription link (change if using Feedburner)
 

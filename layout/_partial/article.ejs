@@ -21,7 +21,7 @@
       <% if (index){ %>
         <% if (item.excerpt){ %>
           <div class="alignleft">
-            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %></a>
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link">Read More</a>
           </div>
         <% } %>
         <% if (item.comment && config.disqus_shortname){ %>
@@ -39,4 +39,6 @@
   </div>
 </article>
 
-<%- partial('comment') %>
+<% if (config.disqus_shortname && page.comments){ %>
+    <%- partial('comment') %>
+<% } %>
