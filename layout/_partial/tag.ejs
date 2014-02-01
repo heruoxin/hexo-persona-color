@@ -1,0 +1,12 @@
+<% if (site.tags.length){ %>
+<div id="myCanvasContainer">
+ <canvas width="500" height="500" id="myCanvas">
+ <ul>
+  <% site.tags.sort('name').each(function(item){ %>
+    <li><h2><a href="<%- config.root %><%- item.path %>"><%= item.name %></a></h2></li>
+  <% }); %>
+  </ul>
+ </canvas>
+</div>
+ 
+<% } %>

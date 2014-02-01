@@ -1,7 +1,8 @@
 <% if (theme.bighomepage){ %>
+<%- partial('tag') %>
   <script>
   $(".archive").click(function (e) {
-      if ($("title").text() == "<%- config.title %>"){
+      if ($("title").text() == "<%- config.title %>" || $("title").text() == "Tag Cloud | <%- config.title %>" ){
           if (e.target.href){
               $(".animated:contains(\'"+e.target.text+"\')").addClass("bounceOut");
               setTimeout(function(){
@@ -16,12 +17,17 @@
   });
   </script>
   <script>
-  $(".backtohome").click(function () {
+  $(".backtohome").click(function (e) {
       if ($("title").text() != "<%- config.title %>"){
+          //go back to home
           setTimeout(function(){
               loadpage();
               history.pushState( null, $("title").text(), "/");
           }, 150);
+      } else {
+          //go to tag cloud
+          loadpage("#tag");
+          history.pushState( "#tag", $("title").text(), "#tag");
       }
       return false;
   });
@@ -29,22 +35,36 @@
 
   <script>
   function loadpage(pageTitle) {
-      if (pageTitle){
+      if (!pageTitle){
+          //home
+          $('#myCanvasContainer').css("display","none");
+          $("title").text("<%- config.title %>");
+          $("[idplus]").css("display","none");
+          $(".titlelist").css("display","");
+      } else if (pageTitle.indexOf("#tag")>=0 ) {
+          //tagcloud
+          $('#myCanvasContainer').css("display","");
+          $("[idplus]").css("display","none");
+          $(".titlelist").css("display","none");
+          $("title").text("Tag Cloud | <%- config.title %>");
+      } else {
+          //pages
+          $('#myCanvasContainer').css("display","none");
           $("title").text(pageTitle + " | <%- config.title %>");
           var pageIDplus=pageTitle.replace(/\s+/g,"")
           $(".titlelist").css("display","none");
           $("[idplus=\'" + pageIDplus +"\']" ).css("display","");
           $("[idplusp=\'" + pageIDplus +"\']" ).replaceWith($("[idplus=\'" + pageIDplus +"\']").html().replace(/img\ s1c/g, "img src"));
-      } else {
-          $("title").text("<%- config.title %>");
-          $("[idplus]").css("display","none");
-          $(".titlelist").css("display","");
       }
   };
   </script>
   <script>
   window.addEventListener('popstate', function(e) {
-      loadpage(e.state);
+      if (location.href.indexOf("#comment") > 0){
+          location.reload();
+      }else {
+          loadpage(e.state);
+      }
       },false);
   </script>
 <% } %>

@@ -1,10 +1,31 @@
 <% if (site.tags.length){ %>
-<div class="widget tag">
-  <h3 class="title"><%= __('tags') %></h3>
-  <ul class="entry">
+<div id="myCanvasContainer" style="display: none;">
+ <canvas width="600" height="600" id="myCanvas">
+ </canvas>
+</div>
+ 
+<div id="tags" style="display: none;">
+ <ul>
   <% site.tags.sort('name').each(function(item){ %>
     <li><a href="<%- config.root %><%- item.path %>"><%= item.name %></a><small><%= item.posts.length %></small></li>
   <% }); %>
   </ul>
 </div>
+
+<script>
+function opentagcloud(){
+$('#myCanvasContainer').css("display","");
+$(document).ready(function() {
+  if( ! $('#myCanvas').tagcanvas({
+    textColour : '#f1f1f1',
+    outlineThickness : 1,
+    maxSpeed : 0.03,
+    depth : 0.75
+  },'tags')) {
+    $('#myCanvasContainer').css("display","none");
+  }
+});
+}
+</script>
+
 <% } %>
