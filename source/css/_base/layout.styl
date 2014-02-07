@@ -51,20 +51,24 @@ a
   width 900px
   overflow auto
   @media screen and (max-width: 1260px)
-    width 100%
-    margin-right -280px
+    max-width 70%
+  @media screen and (max-width: 900px)
+    max-width 66.5%
   @media screen and (max-width: 800px)
+    max-width 100%
     margin-right 0
     float none
 
 #wrapper
-  @media screen and (max-width: 1260px)
-    margin-right 280px
   @media screen and (max-width: 800px)
     margin-right 0
+  #myCanvasContainer
+    margin-left auto
+    margin-right auto
+    width 500px
 
 p
-  text-indent:2em
+  text-indent 2em
 
 #header-fix
   height  25px

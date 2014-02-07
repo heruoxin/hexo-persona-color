@@ -19,19 +19,22 @@
       </div>
     </article>
   </div>
-  <% if (theme.bighomepage){ %>
-    <div class="animated fadeIn" idplus="<%= item.title.replace(/\s+/g,"") %>" style="display: none;">
+<% }); %>
+
+<% page.posts.each(function(item){ %>
+<% if (theme.bighomepage){ %>
+  <div class="animated fadeIn" idplus="<%= item.title.replace(/\s+/g,"") %>" style="display: none;">
     <div idplusp="<%= item.title.replace(/\s+/g,"") %>">
       <%- partial('_partial/article', {item: item, index: false}).replace(/img\ src/g, "img s1c") %>
-  <% if (config.disqus_shortname){ %>
-      <nav id="pagination">
-        <a href="<%- config.root %><%- item.path %>#comment" class="alignright next")">View & Post Comments</a>
-        <div class="clearfix"></div>
-      </nav>
-  <% } %>
+      <% if (config.disqus_shortname){ %>
+        <nav id="pagination">
+          <a href="<%- config.root %><%- item.path %>#comment" class="alignright next")"><%= __('viewcomment') %></a>
+          <div class="clearfix"></div>
+        </nav>
+      <% } %>
     </div>
-    </div>
-  <% } %>
+  </div>
+<% } %>
 <% }); %>
 
 <%- partial('_partial/bighomepage') %>
