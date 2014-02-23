@@ -57,6 +57,11 @@ $("a").click(function () {
  });
  </script>
 
+<% if (theme.forvirgo){ %>
+<script src="<%- config.root %>js/pangu.js"></script>
+<script>pangu.page_spacing();</script>
+<% } %>
+
 <% if (theme.usecdn){ %>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.0.4/jquery.imagesloaded.min.js"></script>
 
@@ -82,5 +87,4 @@ $("a").click(function () {
 })(jQuery);
 </script>
 <% } %>
-
 <% } %>

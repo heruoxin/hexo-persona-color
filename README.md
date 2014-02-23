@@ -79,6 +79,6 @@ rss: /atom.xml
 
 
 [Hexo]: http://zespia.tw/hexo/
-[Demo]: http://www.1ittlecup.com/
+[Demo]: http://10202be9.com/
 [AddThis]: https://www.addthis.com
 [Fancybox]: http://fancyapps.com/fancybox/

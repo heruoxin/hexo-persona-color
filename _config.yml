@@ -33,3 +33,5 @@ usecdn: false
 
 google_analytics: UA-46393541-1
 rss: /atom.xml
+
+forvirgo: true
