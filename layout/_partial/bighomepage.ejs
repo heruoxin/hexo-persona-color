@@ -2,7 +2,7 @@
 <%- partial('tag') %>
   <script>
   $(".archive").click(function (e) {
-      if ($("title").text() == "<%- config.title %>" || $("title").text() == "Tag Cloud | <%- config.title %>" ){
+      if ($("title").text().indexOf( "<%- config.title %>" )>=0 ){
           if (e.target.href){
               $(".animated:contains(\'"+e.target.text+"\')").addClass("bounceOut");
               setTimeout(function(){
@@ -35,13 +35,14 @@
 
   <script>
   function loadpage(pageTitle) {
-      if (!pageTitle){
+      scroll(0,0);
+      if ( !pageTitle ){
           //home
           $('#myCanvasContainer').css("display","none");
           $("title").text("<%- config.title %>");
           $("[idplus]").css("display","none");
           $(".titlelist").css("display","");
-      } else if (pageTitle.indexOf("#tag")>=0 ) {
+      } else if ( pageTitle.indexOf("#tag")>=0 ) {
           //tagcloud
           $('#myCanvasContainer').css("display","");
           $("[idplus]").css("display","none");
@@ -66,6 +67,9 @@
           loadpage(e.state);
       }
       },false);
+  </script>
+  <script>
+
   </script>
 <% } %>
 
