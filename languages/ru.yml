@@ -1,12 +1,12 @@
-categories: Категории
-search: Поиск
-tags: Метки
-tagcloud: Облако меток
-tweets: Твиты
-prev: Назад
-next: Вперед
-comment: Комментарии
-archive_a: Архив
-archive_b: Архив: %s
-page: Страница %d
-viewcomment: Все комментарии
+categories: "Категории"
+search: "Поиск"
+tags: "Метки"
+tagcloud: "Облако меток"
+tweets: "Твиты"
+prev: "Назад"
+next: "Вперед"
+comment: "Комментарии"
+archive_a: "Архив"
+archive_b: "Архив: %s"
+page: "Страница %d"
+viewcomment: "Все комментарии"
