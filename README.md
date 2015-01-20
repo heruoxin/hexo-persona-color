@@ -6,7 +6,7 @@ Theme for [Hexo].
 
 ![4 color schemes](http://ww3.sinaimg.cn/large/66cab368gw1ed07yp2yjfj21400mi7a2.jpg)
 
-You can eidt the color schemes in `themes/persona-color/source/css/_base/variable.styl`
+You can edit the color schemes in `themes/persona-color/source/css/_base/variable.styl`
 
 ## Install
 
