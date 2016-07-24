@@ -24,9 +24,9 @@
             <a href="<%- config.root %><%- item.path %>#more" class="more-link">Read More</a>
           </div>
         <% } %>
-        <% if (item.comment && config.disqus_shortname){ %>
+        <% if (item.comment && config.duoshuo_shortname){ %>
         <div class="alignright">
-          <a href="<%- item.permalink %>#disqus_thread" class="comment-link">Comments</a>
+          <a href="<%- item.permalink %>#ds-thread" class="comment-link">Comments</a>
         </div>
         <% } %>
       <% } else { %>
@@ -39,6 +39,6 @@
   </div>
 </article>
 
-<% if (config.disqus_shortname && page.comments){ %>
+<% if (config.duoshuo_shortname && page.comments){ %>
     <%- partial('comment') %>
 <% } %>
